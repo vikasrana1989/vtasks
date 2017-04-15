@@ -1,0 +1,16 @@
+<div class="col-sm-6">
+	<h3>Tasks</h3>
+	{{#each model as |task|}}
+		<div class="well">
+			<h4>{{#link-to 'tasks.edit' task.id}}{{task.title}}{{/link-to}}</h4>
+			
+			<p>Due Date: {{format-date task.date}}</p>
+			<p>Description: {{task.desc}}</p>
+			<div>
+				
+			</div>
+			<button {{action 'deleteTask' task.id}}  class="btn btn-danger">Delete</button>
+			
+		</div>
+	{{/each}}
+</div>

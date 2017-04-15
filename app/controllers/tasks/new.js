@@ -20,7 +20,9 @@ export default Ember.Controller.extend({
 				title: '',
 				date: '',
 				desc: '',
-			})
+			});
+
+			this.transitionToRoute('tasks');
 		}
 	}
 });
