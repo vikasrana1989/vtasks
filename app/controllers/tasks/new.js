@@ -22,7 +22,10 @@ export default Ember.Controller.extend({
 				desc: '',
 			});
 
-			this.transitionToRoute('tasks');
+			this.transitionToRoute('tasks.list');
+		},
+		cancelTask: function (id){
+			this.transitionToRoute('tasks.list');
 		}
 	}
 });
